@@ -12,14 +12,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import dev.icerock.moko.resources.compose.painterResource
-//import dev.icerock.moko.resources.compose.stringResource
+import dev.icerock.moko.resources.compose.stringResource
 import okik.tech.community.admin.resources.SharedRes
 
 
 @Composable
 fun Home(modifier: Modifier = Modifier) {
     Column(modifier.fillMaxSize()) {
-        val appName: String = "stringResource(SharedRes.strings.test)"
+        val appName: String = stringResource(SharedRes.strings.test)
         val greetingText by remember { mutableStateOf("Hello, xxWorld! $appName") }
 
         Text(greetingText)
