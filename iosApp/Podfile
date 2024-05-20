@@ -6,7 +6,7 @@ target 'CommunityAdmin' do
   use_frameworks!
 
   # Pods for CommunityAdmin
-  pod 'shared', :path => '../shared'
+  pod 'kmpApp', :path => '../kmpApp'
 
   target 'CommunityAdminTests' do
     inherit! :search_paths

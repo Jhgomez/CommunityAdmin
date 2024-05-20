@@ -1,16 +1,16 @@
 PODS:
-  - shared (1.0.0)
+  - kmpApp (1.0.0)
 
 DEPENDENCIES:
-  - shared (from `../shared`)
+  - kmpApp (from `../kmpApp`)
 
 EXTERNAL SOURCES:
-  shared:
-    :path: "../shared"
+  kmpApp:
+    :path: "../kmpApp"
 
 SPEC CHECKSUMS:
-  shared: 4da9cef932c39d545e8d56ebf4ce9cff428439b9
+  kmpApp: baceefa09cbeff45868ef1a78237fe1ad70b2fde
 
-PODFILE CHECKSUM: 9bb726856d3f7e224894bd8f75eb449db52ee247
+PODFILE CHECKSUM: 210509ef35fee6f80e5a8d566a9af34124e6e394
 
 COCOAPODS: 1.15.2
