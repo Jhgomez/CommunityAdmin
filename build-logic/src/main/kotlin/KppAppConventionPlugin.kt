@@ -1,3 +1,4 @@
+import com.android.build.api.dsl.ApplicationExtension
 import com.android.build.gradle.LibraryExtension
 import okik.tech.community.admin.configureKotlinAndroid
 import okik.tech.community.admin.libs
@@ -8,26 +9,34 @@ import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.compose.ComposePlugin
 import org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension
 
-class MultiplatformCommonConventionPlugin: Plugin<Project> {
+class KppAppConventionPlugin: Plugin<Project> {
 
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
+//                apply("com.android.application")
+//                apply("okik.android.versioning")
                 apply("org.jetbrains.kotlin.multiplatform")
                 apply("org.jetbrains.kotlin.native.cocoapods")
-                apply("com.android.library")
                 apply("org.jetbrains.compose")
                 apply("dev.icerock.mobile.multiplatform-resources")
             }
 
+//            extensions.configure<ApplicationExtension> {
+//                defaultConfig.targetSdk =
+//                    libs.findVersion("targetSdk").get().toString().toInt()
+//                configureKotlinAndroid(this)
+//
+//                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
+//
+//                testOptions.unitTests.isIncludeAndroidResources = true
+//
+//                dependencies {
+//                    add("implementation", libs.findLibrary("androidx.core.splashscreen").get())
+//                }
+//            }
+
             plugins.withType(ComposePlugin::class.java) {
-                extensions.configure<LibraryExtension> {
-                    configureKotlinAndroid(this)
-
-                    compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
-
-                    testOptions.unitTests.isIncludeAndroidResources = true
-                }
 
                 extensions.configure<KotlinMultiplatformExtension> {
                     androidTarget() //this configuration could be removed, try removing it after all project is compiled
