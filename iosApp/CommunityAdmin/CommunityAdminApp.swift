@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import shared
+import kmpApp
 
 @main
 struct CommunityAdminApp: App {
