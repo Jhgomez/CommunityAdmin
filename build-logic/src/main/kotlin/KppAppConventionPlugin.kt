@@ -14,8 +14,8 @@ class KppAppConventionPlugin: Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-//                apply("com.android.application")
-//                apply("okik.android.versioning")
+                apply("com.android.application")
+                apply("okik.android.versioning")
                 apply("org.jetbrains.kotlin.multiplatform")
                 apply("org.jetbrains.kotlin.native.cocoapods")
                 apply("org.jetbrains.compose")
