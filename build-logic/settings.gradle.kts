@@ -13,7 +13,3 @@ dependencyResolutionManagement {
         }
     }
 }
-
-include(":convention")
-
-project(":convention").projectDir = File(rootDir, "convention")
