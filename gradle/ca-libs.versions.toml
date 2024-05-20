@@ -46,5 +46,4 @@ kotlin_native_cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", versio
 icerock_resource_generator = { id ="dev.icerock.mobile.multiplatform-resources", version.ref = "resourceGenerator" }
 
 #plugins defined in this project
-okik-application = { id = "okik.android.application", version = "unspecified" }
-okik-multiplatform-shared = { id = "okik.multiplatform.shared", version = "unspecified" }
+okik-kpp-application = { id = "okik.kpp.app", version = "unspecified" }
