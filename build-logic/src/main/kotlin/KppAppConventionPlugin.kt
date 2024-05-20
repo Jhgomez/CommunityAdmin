@@ -22,19 +22,19 @@ class KppAppConventionPlugin: Plugin<Project> {
                 apply("dev.icerock.mobile.multiplatform-resources")
             }
 
-//            extensions.configure<ApplicationExtension> {
-//                defaultConfig.targetSdk =
-//                    libs.findVersion("targetSdk").get().toString().toInt()
-//                configureKotlinAndroid(this)
-//
-//                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
-//
-//                testOptions.unitTests.isIncludeAndroidResources = true
-//
-//                dependencies {
-//                    add("implementation", libs.findLibrary("androidx.core.splashscreen").get())
-//                }
-//            }
+            extensions.configure<ApplicationExtension> {
+                defaultConfig.targetSdk =
+                    libs.findVersion("targetSdk").get().toString().toInt()
+                configureKotlinAndroid(this)
+
+                compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
+
+                testOptions.unitTests.isIncludeAndroidResources = true
+
+                dependencies {
+                    add("implementation", libs.findLibrary("androidx.core.splashscreen").get())
+                }
+            }
 
             plugins.withType(ComposePlugin::class.java) {
 
