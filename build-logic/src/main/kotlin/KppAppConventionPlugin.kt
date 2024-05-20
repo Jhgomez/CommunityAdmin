@@ -23,11 +23,27 @@ class KppAppConventionPlugin: Plugin<Project> {
             }
 
             extensions.configure<ApplicationExtension> {
-                defaultConfig.targetSdk =
-                    libs.findVersion("targetSdk").get().toString().toInt()
+                defaultConfig {
+                    targetSdk =
+                        libs.findVersion("targetSdk").get().toString().toInt()
+
+                    applicationId = "okik.tech.community.admin"
+                    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+                }
+
                 configureKotlinAndroid(this)
 
                 compileSdk = libs.findVersion("compileSdk").get().toString().toInt()
+
+                buildTypes {
+                    release {
+                        isMinifyEnabled = false
+                        proguardFiles(
+                            getDefaultProguardFile("proguard-android-optimize.txt"),
+                            "proguard-rules.pro"
+                        )
+                    }
+                }
 
                 testOptions.unitTests.isIncludeAndroidResources = true
 
