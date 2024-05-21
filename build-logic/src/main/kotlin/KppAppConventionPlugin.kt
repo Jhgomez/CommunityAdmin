@@ -89,8 +89,8 @@ class KppAppConventionPlugin: Plugin<Project> {
                         dependencies {
                             api(libs.findLibrary("activity.compose").get())
 
-                            implementation(libs.findLibrary("androidx.cor.ktx").get())
-                            implementation("androidx.appcompat:appcompat:1.6.1")
+                            implementation(libs.findLibrary("androidx.core.ktx").get())
+                            implementation(libs.findLibrary("androidx.appcompat").get())
                             implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
 
 //            implementation("com.google.android.material:material:1.10.0")
