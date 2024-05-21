@@ -61,7 +61,17 @@ class KppAppConventionPlugin: Plugin<Project> {
             plugins.withType(ComposePlugin::class.java) {
 
                 extensions.configure<KotlinMultiplatformExtension> {
-                    androidTarget() //this configuration could be removed, try removing it after all project is compiled
+                    androidTarget {
+                        compilations.all {
+                            kotlinOptions {
+                                jvmTarget = JavaVersion.VERSION_11.toString()
+                            }
+
+                            compilerOptions.configure {
+                                freeCompilerArgs.add("-Xexpect-actual-classes")
+                            }
+                        }
+                    }
                     iosX64()
                     iosArm64()
                     iosSimulatorArm64()
@@ -78,6 +88,20 @@ class KppAppConventionPlugin: Plugin<Project> {
                         dependsOn(sourceSets.getByName("commonMain"))
                         dependencies {
                             api(libs.findLibrary("activity.compose").get())
+
+                            implementation(libs.findLibrary("androidx.cor.ktx").get())
+                            implementation("androidx.appcompat:appcompat:1.6.1")
+                            implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
+
+//            implementation("com.google.android.material:material:1.10.0")
+//            implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+//            implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+//            implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2")
+//            implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
+
+//            testImplementation("junit:junit:4.13.2")
+//            androidTestImplementation("androidx.test.ext:junit:1.1.5")
+//            androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
                         }
                     }
 
@@ -86,14 +110,6 @@ class KppAppConventionPlugin: Plugin<Project> {
                         sourceSets.getByName("iosX64Main").dependsOn(this)
                         sourceSets.getByName("iosArm64Main").dependsOn(this)
                         sourceSets.getByName("iosSimulatorArm64Main").dependsOn(this)
-                    }
-
-                    // Check if opt-in still needed in following Kotlin releases
-                    // https://youtrack.jetbrains.com/issue/KT-61573
-                    androidTarget().compilations.configureEach {
-                        compilerOptions.configure {
-                            freeCompilerArgs.add("-Xexpect-actual-classes")
-                        }
                     }
 
                     dependencies {
