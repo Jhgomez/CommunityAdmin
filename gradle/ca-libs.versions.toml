@@ -34,9 +34,8 @@ androidx_core_ktx = { group = "androidx.core", name = "core-ktx", version.ref = 
 androidx_appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppcompat" }
 androidx_navigation = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidxNavigation" }
 google_android_material = { group = "com.google.android.material", name = "material", version.ref = "googleAndroidMaterial" }
-androidx_constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "" }
-= { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "2.6.2" }
-= { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "2.6.2" }
+androidx_constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidxConstraintlayout" }
+lifecycle_viewmodel_ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "2.6.2" }
 = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "2.7.5" }
 
 #testing
