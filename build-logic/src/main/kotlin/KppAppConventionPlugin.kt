@@ -63,9 +63,6 @@ class KppAppConventionPlugin: Plugin<Project> {
                 extensions.configure<KotlinMultiplatformExtension> {
                     androidTarget {
                         compilations.all {
-                            kotlinOptions {
-                                jvmTarget = JavaVersion.VERSION_11.toString()
-                            }
 
                             compilerOptions.configure {
                                 freeCompilerArgs.add("-Xexpect-actual-classes")
@@ -91,7 +88,7 @@ class KppAppConventionPlugin: Plugin<Project> {
 
                             implementation(libs.findLibrary("androidx.core.ktx").get())
                             implementation(libs.findLibrary("androidx.appcompat").get())
-                            implementation(libs.findLibrary("androidx.navigation").get())
+                            implementation(libs.findLibrary("androidx.navigation.ktx").get())
 
 //            implementation("com.google.android.material:material:1.10.0")
 //            implementation("androidx.constraintlayout:constraintlayout:2.1.4")
