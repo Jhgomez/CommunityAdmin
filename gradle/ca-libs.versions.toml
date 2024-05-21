@@ -47,3 +47,4 @@ icerock_resource_generator = { id ="dev.icerock.mobile.multiplatform-resources",
 
 #plugins defined in this project
 okik-kpp-application = { id = "okik.kpp.app", version = "unspecified" }
+okik-shared-kpp = { id = "okik.kpp.shared", version = "unspecified" }
