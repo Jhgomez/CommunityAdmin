@@ -4,6 +4,7 @@ splash = "1.0.0"
 androidDesugar = "2.0.3"
 activityCompose = "1.8.2"
 composeCompiler = "1.5.4"
+androidCoreKtx = "1.9.0"
 
 #Plugin versions
 androidGradlePlugin = "8.2.2"
@@ -25,6 +26,15 @@ compose_foundation = { group = "org.jetbrains.compose.foundation", name = "found
 activity_compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 icerock_moko_resources = { group = "dev.icerock.moko", name = "resources", version.ref = "resourceGenerator" }
 icerock_moko_resources_compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "resourceGenerator" }
+androidx_core = { group = "androidx.core", name = "core-ktx", version.ref = "androidCoreKtx" }
+{"androidx.appcompat:appcompat:1.6.1"}
+{"androidx.navigation:navigation-ui-ktx:2.7.5"}
+
+{"com.google.android.material:material:1.10.0"}
+{"androidx.constraintlayout:constraintlayout:2.1.4"}
+{"androidx.lifecycle:lifecycle-livedata-ktx:2.6.2"}
+{"androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.2"}
+{"androidx.navigation:navigation-fragment-ktx:2.7.5"}
 
 #testing
 icerock_moko_resources_test = { group = "dev.icerock.moko", name = "resources-test", version.ref = "resourceGenerator" }
