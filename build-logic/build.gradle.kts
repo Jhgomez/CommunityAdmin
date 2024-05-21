@@ -31,6 +31,10 @@ gradlePlugin {
             id = "okik.kpp.app"
             implementationClass = "KppAppConventionPlugin"
         }
+        register("kppShared") {
+            id = "okik.kpp.shared"
+            implementationClass = "SharedKppConventionPlugin"
+        }
     }
 }
 
