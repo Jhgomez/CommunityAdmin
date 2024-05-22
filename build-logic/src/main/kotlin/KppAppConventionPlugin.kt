@@ -86,6 +86,7 @@ class KppAppConventionPlugin: Plugin<Project> {
                         dependencies {
                             api(libs.findLibrary("activity.compose").get())
 
+                            implementation(libs.findLibrary("kotlinx.coroutines.android").get())
                             implementation(libs.findLibrary("androidx.core.ktx").get())
                             implementation(libs.findLibrary("androidx.appcompat").get())
                             implementation(libs.findLibrary("androidx.navigation.ktx").get())
