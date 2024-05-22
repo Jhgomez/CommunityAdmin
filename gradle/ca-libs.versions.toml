@@ -12,6 +12,7 @@ androidxConstraintlayout = "2.1.4"
 lifecycleViewmodelKtx = "2.6.2"
 navigationFragmentKtx = "2.7.5"
 ktor = "2.3.11"
+coroutines = "1.8.0"
 
 #Plugin versions
 androidGradlePlugin = "8.2.2"
@@ -46,6 +47,9 @@ icerock_moko_resources_compose = { group = "dev.icerock.moko", name = "resources
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
 
 #testing
 icerock_moko_resources_test = { group = "dev.icerock.moko", name = "resources-test", version.ref = "resourceGenerator" }
