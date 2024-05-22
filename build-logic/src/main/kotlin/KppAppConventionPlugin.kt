@@ -5,6 +5,7 @@ import okik.tech.community.admin.libs
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.compose.ComposePlugin
@@ -21,6 +22,7 @@ class KppAppConventionPlugin: Plugin<Project> {
                 apply("org.jetbrains.kotlin.native.cocoapods")
                 apply("org.jetbrains.compose")
                 apply("dev.icerock.mobile.multiplatform-resources")
+                apply("app.cash.sqldelight")
             }
 
             extensions.configure<ApplicationExtension> {
