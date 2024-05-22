@@ -7,10 +7,10 @@ android {
     namespace = "okik.tech.community.admin.shared.storage"
 }
 
-//sqldelight {
-//    databases {
-//        create("CADatabase") {
-//            packageName.set("okik.tech.community.admin.shared.storage")
-//        }
-//    }
-//}
+sqldelight {
+    databases {
+        create("CADatabase") {
+            packageName.set("okik.tech.community.admin.shared.storage")
+        }
+    }
+}
