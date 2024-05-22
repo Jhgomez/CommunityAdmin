@@ -13,7 +13,9 @@ dependencyResolutionManagement {
         }
     }
 
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    // Configuration causes KMP failures when adding some configurations, check for compatibility
+    // in next gradle updates
+//    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
