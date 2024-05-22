@@ -38,10 +38,6 @@ private fun Project.configureKotlin() {
             jvmTarget = JavaVersion.VERSION_11.toString()
             val warningAsErrors: String? by project
             allWarningsAsErrors = warningAsErrors.toBoolean()
-            freeCompilerArgs += listOf(
-                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-                "-opt-in=kotlinx.coroutines.FlowPreview",
-            )
         }
     }
 }
