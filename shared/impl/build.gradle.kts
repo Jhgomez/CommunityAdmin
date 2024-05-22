@@ -3,5 +3,5 @@ plugins {
 }
 
 android {
-    namespace = "okik.tech.community.admin.shared"
+    namespace = "okik.tech.community.admin.shared.impl"
 }
