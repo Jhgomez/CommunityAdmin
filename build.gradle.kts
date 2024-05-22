@@ -5,4 +5,5 @@ plugins {
     alias(libs.plugins.kotlinMultiplatform) apply false
     alias(libs.plugins.compose.multiplatform) apply false
     alias(libs.plugins.icerock.resource.generator) apply false
+    alias(libs.plugins.sqldelight) apply false
 }
