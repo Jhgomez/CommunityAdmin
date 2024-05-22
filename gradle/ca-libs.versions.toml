@@ -11,6 +11,7 @@ googleAndroidMaterial = "1.10.0"
 androidxConstraintlayout = "2.1.4"
 lifecycleViewmodelKtx = "2.6.2"
 navigationFragmentKtx = "2.7.5"
+ktor = "2.3.11"
 
 #Plugin versions
 androidGradlePlugin = "8.2.2"
@@ -42,6 +43,9 @@ compose_material3 = { group = "org.jetbrains.compose.material3", name = "materia
 compose_foundation = { group = "org.jetbrains.compose.foundation", name = "foundation", version.ref = "composePlugin" }
 icerock_moko_resources = { group = "dev.icerock.moko", name = "resources", version.ref = "resourceGenerator" }
 icerock_moko_resources_compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "resourceGenerator" }
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
 
 #testing
 icerock_moko_resources_test = { group = "dev.icerock.moko", name = "resources-test", version.ref = "resourceGenerator" }
