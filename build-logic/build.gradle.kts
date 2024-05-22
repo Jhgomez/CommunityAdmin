@@ -43,4 +43,5 @@ dependencies {
     compileOnly(libs.android.gradleplugin)
     compileOnly(libs.compose.multiplatform.gradleplugin)
     compileOnly(libs.multiplatform.icerock.resources.generator)
+    compileOnly(libs.sqldelight.gradleplugin)
 }
