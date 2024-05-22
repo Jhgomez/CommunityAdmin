@@ -22,7 +22,6 @@ class KppAppConventionPlugin: Plugin<Project> {
                 apply("org.jetbrains.kotlin.native.cocoapods")
                 apply("org.jetbrains.compose")
                 apply("dev.icerock.mobile.multiplatform-resources")
-                apply("app.cash.sqldelight")
             }
 
             extensions.configure<ApplicationExtension> {
