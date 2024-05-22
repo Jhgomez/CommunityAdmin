@@ -60,7 +60,7 @@ kotlin_gradleplugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-pl
 android_gradleplugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 compose_multiplatform_gradleplugin = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "composePlugin" }
 multiplatform_icerock_resources_generator = { group = "dev.icerock.moko", name = "resources-generator", version.ref = "resourceGenerator" }
-sqldelight_gradleplugin = { group = "app.cash.sqldelight", name = "gradle-plugin", version = "sqldelightGradlePlugin"}
+sqldelight_gradleplugin = { group = "app.cash.sqldelight", name = "gradle-plugin", version.ref = "sqldelightGradlePlugin"}
 
 [plugins]
 #full plugins contains the version and are used in root projects build script, short versions are used in
