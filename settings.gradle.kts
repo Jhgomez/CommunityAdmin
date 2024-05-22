@@ -25,4 +25,5 @@ rootProject.name = "CommunityAdmin"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 include(":kmpApp")
 include(":shared")
- 
+include(":shared:networking")
+include(":shared:storage")
