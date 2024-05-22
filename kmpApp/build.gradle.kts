@@ -30,3 +30,9 @@ multiplatformResources {
     multiplatformResourcesClassName = "SharedRes"
     multiplatformResourcesVisibility = MRVisibility.Public
 }
+
+dependencies {
+    implementation(project(":shared:database"))
+    implementation(project(":shared:networking"))
+    implementation(project(":shared:impl"))
+}
