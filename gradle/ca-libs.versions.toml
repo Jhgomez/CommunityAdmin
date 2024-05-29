@@ -1,80 +1,82 @@
 [versions]
-#bynary dependecies versions
-splash = "1.0.0"
-androidDesugar = "2.0.3"
 activityCompose = "1.8.2"
-composeCompiler = "1.5.4"
+androidAppcompat = "1.6.1"
+androidConstraintlayout = "2.1.4"
 androidCoreKtx = "1.9.0"
-androidxAppcompat = "1.6.1"
+androidDesugar = "2.0.3"
+androidlifecycleViewmodelKtx = "2.6.2"
 androidxNavigation = "2.7.5"
-googleAndroidMaterial = "1.10.0"
-androidxConstraintlayout = "2.1.4"
-lifecycleViewmodelKtx = "2.6.2"
-navigationFragmentKtx = "2.7.5"
-ktor = "2.3.11"
+composeCompiler = "1.5.4"
 coroutines = "1.8.0"
+googleAndroidMaterial = "1.10.0"
+ktor = "2.3.11"
+sqldelight = "2.0.2"
+splash = "1.0.0"
 
-#Plugin versions
+# Plugin versions
 androidGradlePlugin = "8.2.2"
 composePlugin = "1.6.2"
 kotlin = "1.9.22"
 resourceGenerator = "0.23.0"
 sqldelightGradlePlugin = "2.0.2"
 
-#Android-Kotlin versions
-targetSdk = "34"
-minSdk = "24"
+# Android-Kotlin versions
 compileSdk = "34"
+minSdk = "24"
+targetSdk = "34"
 
 [libraries]
-#Android
-androidx_core_splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
+# Android
+android_activity_compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
+android_appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidAppcompat" }
+android_constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidConstraintlayout" }
+android_core_splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splash" }
+android_core_ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidCoreKtx" }
 android_desugar = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugar"}
-activity_compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
-androidx_core_ktx = { group = "androidx.core", name = "core-ktx", version.ref = "androidCoreKtx" }
-androidx_appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "androidxAppcompat" }
-androidx_navigation_ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidxNavigation" }
+android_lifecycle_viewmodel_ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "androidlifecycleViewmodelKtx" }
+android_navigation_ui_ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "androidxNavigation" }
+android_navigation_fragment_ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "androidxNavigation" }
 google_android_material = { group = "com.google.android.material", name = "material", version.ref = "googleAndroidMaterial" }
-androidx_constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "androidxConstraintlayout" }
-lifecycle_viewmodel_ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
-androidx_navigation_fragment_ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 
-#Multiplatform
+# Multiplatform
 compose_compiler = { group = "org.jetbrains.compose.compiler", name = "compiler", version.ref = "composeCompiler" }
 compose_material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composePlugin" }
 compose_foundation = { group = "org.jetbrains.compose.foundation", name = "foundation", version.ref = "composePlugin" }
 icerock_moko_resources = { group = "dev.icerock.moko", name = "resources", version.ref = "resourceGenerator" }
 icerock_moko_resources_compose = { group = "dev.icerock.moko", name = "resources-compose", version.ref = "resourceGenerator" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
 ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
-kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
-kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+sqldelight_android_driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+sqldelight_native_driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+sqldelight_driver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
 
-
-#testing
+# Testing
 icerock_moko_resources_test = { group = "dev.icerock.moko", name = "resources-test", version.ref = "resourceGenerator" }
 
-#plugin version dependencies used in included project build logic
-kotlin_gradleplugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin"} # same as implementation(kotlin("gradle-plugin", version))
+# Plugin version dependencies used in included project build logic
 android_gradleplugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 compose_multiplatform_gradleplugin = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "composePlugin" }
+kotlin_gradleplugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin"} # same as implementation(kotlin("gradle-plugin", version))
 multiplatform_icerock_resources_generator = { group = "dev.icerock.moko", name = "resources-generator", version.ref = "resourceGenerator" }
 sqldelight_gradleplugin = { group = "app.cash.sqldelight", name = "gradle-plugin", version.ref = "sqldelightGradlePlugin"}
 
 [plugins]
-#full plugins contains the version and are used in root projects build script, short versions are used in
-#local/convention plugins or in project build scripts if needed
+# Full plugins contains the version and are used in root projects build script, short versions are used in
+# local/convention plugins or in project build scripts if needed
 android_application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 # kotlin_android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" } this won't be needed at the moment
 
-#Multiplatform
+# Multiplatform
 compose_multiplatform = { id = "org.jetbrains.compose", version.ref = "composePlugin" }
+# Can't separate with "_" because it confuses the name with an existing extension
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin_native_cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 icerock_resource_generator = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "resourceGenerator" }
 sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelightGradlePlugin" }
 
-#plugins defined in this project
+# Plugins defined in this project
 okik-kpp-application = { id = "okik.kpp.app", version = "unspecified" }
 okik-shared-kpp = { id = "okik.kpp.shared", version = "unspecified" }
