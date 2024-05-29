@@ -10,7 +10,7 @@ android {
 sqldelight {
     databases {
         create("CADatabase") {
-            packageName.set("okik.tech.community.admin.shared.storage")
+            packageName.set("okik.tech.community.admin.shared.database")
         }
     }
 }
