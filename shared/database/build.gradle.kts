@@ -24,8 +24,4 @@ kotlin {
     sourceSets.iosMain.dependencies {
         implementation(libs.sqldelight.native.driver)
     }
-
-    sourceSets.jvmMain.dependencies {
-        implementation(libs.sqldelight.driver)
-    }
 }
