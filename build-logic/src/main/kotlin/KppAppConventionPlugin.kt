@@ -1,11 +1,9 @@
 import com.android.build.api.dsl.ApplicationExtension
-import com.android.build.gradle.LibraryExtension
 import okik.tech.community.admin.configureKotlinAndroid
 import okik.tech.community.admin.libs
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.kotlin.dsl.apply
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.dependencies
 import org.jetbrains.compose.ComposePlugin
@@ -55,7 +53,7 @@ class KppAppConventionPlugin: Plugin<Project> {
                 testOptions.unitTests.isIncludeAndroidResources = true
 
                 dependencies {
-                    add("implementation", libs.findLibrary("androidx.core.splashscreen").get())
+                    add("implementation", libs.findLibrary("android.core.splashscreen").get())
                 }
             }
 
@@ -85,12 +83,12 @@ class KppAppConventionPlugin: Plugin<Project> {
                     sourceSets.androidMain {
                         dependsOn(sourceSets.getByName("commonMain"))
                         dependencies {
-                            api(libs.findLibrary("activity.compose").get())
+                            api(libs.findLibrary("android.activity.compose").get())
 
                             implementation(libs.findLibrary("kotlinx.coroutines.android").get())
-                            implementation(libs.findLibrary("androidx.core.ktx").get())
-                            implementation(libs.findLibrary("androidx.appcompat").get())
-                            implementation(libs.findLibrary("androidx.navigation.ktx").get())
+                            implementation(libs.findLibrary("android.core.ktx").get())
+                            implementation(libs.findLibrary("android.appcompat").get())
+                            implementation(libs.findLibrary("android.navigation.ui.ktx").get())
 
 //            implementation("com.google.android.material:material:1.10.0")
 //            implementation("androidx.constraintlayout:constraintlayout:2.1.4")
