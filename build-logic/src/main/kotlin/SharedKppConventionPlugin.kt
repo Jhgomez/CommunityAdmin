@@ -57,6 +57,7 @@ class SharedKppConventionPlugin: Plugin<Project> {
                 }
 
                 sourceSets.iosMain {
+                    dependsOn(sourceSets.commonMain.get())
                     sourceSets.getByName("iosX64Main").dependsOn(this)
                     sourceSets.getByName("iosArm64Main").dependsOn(this)
                     sourceSets.getByName("iosSimulatorArm64Main").dependsOn(this)
