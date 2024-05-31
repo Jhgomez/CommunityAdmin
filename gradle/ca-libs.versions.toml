@@ -40,6 +40,7 @@ google_android_material = { group = "com.google.android.material", name = "mater
 
 # Multiplatform
 compose_compiler = { group = "org.jetbrains.compose.compiler", name = "compiler", version.ref = "composeCompiler" }
+compose_foundation = { group = "org.jetbrains.compose.foundation", name = "foundation", version.ref = "composePlugin" }
 compose_material3 = { group = "org.jetbrains.compose.material3", name = "material3", version.ref = "composePlugin" }
 compose_runtime = { group = "org.jetbrains.compose.runtime", name = "runtime", version.ref = "composePlugin" }
 icerock_moko_resources = { group = "dev.icerock.moko", name = "resources", version.ref = "resourceGenerator" }
