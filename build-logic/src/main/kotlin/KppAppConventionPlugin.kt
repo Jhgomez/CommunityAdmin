@@ -77,6 +77,7 @@ class KppAppConventionPlugin: Plugin<Project> {
                         dependencies {
                             implementation(libs.findLibrary("compose.foundation").get())
                             implementation(libs.findLibrary("compose.material3").get())
+                            implementation(libs.findLibrary("compose_runtime").get())
                             api(libs.findLibrary("icerock.moko.resources.compose").get())
                         }
                     }
