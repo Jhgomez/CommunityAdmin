@@ -48,11 +48,11 @@ icerock_moko_resources_compose = { group = "dev.icerock.moko", name = "resources
 kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
-ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktor" }
+ktor-client-okhttp = { module = "io.ktor:ktor-client-okhttp", version.ref = "ktor" }
 sqldelight_android_driver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
-sqldelight_native_driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
 sqldelight_driver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+sqldelight_native_driver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
 
 # Testing
 icerock_moko_resources_test = { group = "dev.icerock.moko", name = "resources-test", version.ref = "resourceGenerator" }
