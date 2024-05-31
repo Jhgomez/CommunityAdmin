@@ -73,6 +73,7 @@ android_application = { id = "com.android.application", version.ref = "androidGr
 compose_multiplatform = { id = "org.jetbrains.compose", version.ref = "composePlugin" }
 # Can't separate with "_" because it confuses the name with an existing extension
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+compose_compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin_native_cocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
 icerock_resource_generator = { id = "dev.icerock.mobile.multiplatform-resources", version.ref = "resourceGenerator" }
 sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelightGradlePlugin" }
