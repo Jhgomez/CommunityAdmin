@@ -258,3 +258,6 @@ xcuserdata/
 *yarn.lock
 Pods/Target Support Files
 Pods/Manifest.lock
+
+#Kotlin 2.0.0
+.kotlin/

@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../kmpApp"
 
 SPEC CHECKSUMS:
-  kmpApp: baceefa09cbeff45868ef1a78237fe1ad70b2fde
+  kmpApp: 9eb7b629b3b47172c3cc582f81c0beca77165b19
 
 PODFILE CHECKSUM: 210509ef35fee6f80e5a8d566a9af34124e6e394
 

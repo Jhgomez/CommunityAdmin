@@ -1,0 +1,10 @@
+CREATE TABLE UserEntity(
+  id INTEGER PRIMARY KEY NOT NULL,
+  firstName TEXT NOT NULL,
+  lastName TEXT NOT NULL,
+  phoneNumber TEXT NOT NULL,
+  gender TEXT NOT NULL,
+  address TEXT NOT NULL,
+  houseNumber TEXT NOT NULL,
+  createdAt INTEGER NOT NULL
+);
