@@ -19,10 +19,6 @@ tasks.withType<KotlinCompile>().configureEach {
 
 gradlePlugin {
     plugins {
-        register("androidApplication") {
-            id = "okik.android.application"
-            implementationClass = "ApplicationConventionPlugin"
-        }
         register("gitTagsVersionCode") {
             id = "okik.android.versioning"
             implementationClass = "VersioningProviderConventionPlugin"
