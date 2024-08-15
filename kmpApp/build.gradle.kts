@@ -26,9 +26,9 @@ kotlin {
 }
 
 multiplatformResources {
-    multiplatformResourcesPackage = resourcesPackageName
-    multiplatformResourcesClassName = "SharedRes"
-    multiplatformResourcesVisibility = MRVisibility.Public
+    resourcesPackage = resourcesPackageName
+    resourcesClassName = "SharedRes"
+    resourcesVisibility = MRVisibility.Public
 }
 
 dependencies {
