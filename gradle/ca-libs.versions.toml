@@ -17,7 +17,7 @@ splash = "1.0.0"
 androidGradlePlugin = "8.2.2"
 composePlugin = "1.6.10"
 kotlin = "2.0.0"
-resourceGenerator = "0.23.0"
+resourceGenerator = "0.24.1"
 sqldelightGradlePlugin = "2.0.2"
 
 # Android-Kotlin versions
